@@ -26,7 +26,6 @@ export const PostItemMemo: FC<Omit<Post, 'created_at'>> = ({
   const session = useStore((state) => state.session)
   const update = useStore((state) => state.updateEditedPost)
   const { data } = useQueryAvatar(user_id)
-  console.log(user_id)
   const { deletePostMutation } = useMutatePost()
   const { fullUrl: avatarUrl, isLoading: isLoadingAvatar } = useDownloadUrl(
     data?.avatar_url,

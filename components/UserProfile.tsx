@@ -30,7 +30,7 @@ export const UserProfile: FC = () => {
   }
   return (
     <>
-      <p className="mb-4">{profile?.username}</p>
+      <p className="mb-4"> name : {profile?.username}</p>
       {profile?.created_at && (
         <p className="my-1 text-sm">
           {format(new Date(profile.created_at), 'yyyy-MM-dd HH:mm:ss')}

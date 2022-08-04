@@ -9,11 +9,11 @@ export const useUploadPostImg = () => {
   const useMutateUploadPostImg = useMutation(
     async (e: ChangeEvent<HTMLInputElement>) => {
       if (!e.target.files || e.target.files.length === 0) {
-        throw new Error('Please select the image file')
+        throw new Error('please select the img file')
       }
       const file = e.target.files[0]
       const fileExt = file.name.split('.').pop()
-      const fileName = `${Math.random()}.${fileExt}`
+      const fileName = `${Math.random()}${fileExt}`
       const filePath = `${fileName}`
       const { error } = await supabase.storage
         .from('posts')

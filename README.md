@@ -26,3 +26,4 @@ for each row execute procedure moddatetime (updated_at);
 -- Enable row level subscrition for comments table
 alter table "comments" replica identity full;
 ~~~# realtime
+# realtime

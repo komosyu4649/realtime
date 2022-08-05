@@ -35,16 +35,5 @@ describe('Authentication', () => {
   //       'register-test@mail.com'
   //     )
   //   })
-  it('Shall navigate to DashBoard when successfully registered', () => {
-    cy.get('input[placeholder="Email"]').type('register-test@mail.com')
-    cy.get('input[placeholder="Password"]').type('register123')
-    cy.contains('change mode ?').click()
-    cy.get("[type='submit']").should('have.text', 'Register')
-    cy.get("[type='submit']").click()
-    cy.get('input[placeholder="Username"]').should(
-      'have.value',
-      'register-test@mail.com'
-    )
-  })
 })
 export {}

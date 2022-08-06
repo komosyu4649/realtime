@@ -12,7 +12,7 @@ export const Notification: FC = () => {
     <>
       <p className="mb-4 text-center">notification</p>
       <NoticeForm />
-      <ul className="my-5" data-ul-notice>
+      <ul className="my-5" data-testid="ul-notice">
         {notices?.map((notice) => (
           <NoticeItem
             key={notice.id}
